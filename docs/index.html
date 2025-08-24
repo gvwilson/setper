@@ -16,7 +16,34 @@
 <a href="#">Lessons</a>
 <span class="dropdown-content" id="nav-lessons">
 <a href="./intro/">Introduction</a>
+<a href="./profile/">Profiling</a>
+<a href="./fuzzing/">Fuzzing</a>
+<a href="./packaging/">Packaging</a>
+<a href="./accessibility/">Accessibility</a>
+<a href="./linting/">Static Analysis</a>
+<a href="./queueing/">Queueing Theory</a>
+<a href="./monitoring/">Monitoring</a>
 <a href="./meetings/">Meetings</a>
+<a href="./requirements/">Requirements</a>
+<a href="./status/">Project Status</a>
+<a href="./governance/">Governance</a>
+<a href="./onboard/">Onboarding</a>
+<a href="./perfreview/">Performance Review</a>
+<a href="./offboard/">Offboarding</a>
+<a href="./mining/">Mining Software Repositories</a>
+<a href="./surveys/">Surveys</a>
+<a href="./qual/">Qualitative Studies</a>
+<a href="./lying/">How to Lie With Statistics</a>
+<a href="./conway/">Conway's Law</a>
+<a href="./productivity/">Productivity and Its Disconents</a>
+<a href="./discrimination/">Discrimination</a>
+<a href="./business/">Business Models</a>
+<a href="./ip/">Intellectual Property</a>
+<a href="./fraud/">Fraud</a>
+<a href="./climate/">Environmental Impact</a>
+<a href="./speech/">Censorship and Free Speech</a>
+<a href="./labor/">Labor Rights</a>
+<a href="./licensure/">Licensure and Liability</a>
 <a href="./finale/">Conclusion</a>
 </span>
 </span>
@@ -34,45 +61,7 @@
 </nav>
 <main>
 <h1>Software Engineering: Tools, Process, Evidence, and Responsibility</h1>
-<ul>
-<li>A one-semester introduction to software engineering for junior and senior undergraduates<ul>
-<li>Three classroom hours per week for 12 weeks</li>
-<li>Mix of individual and collaborative assessments</li>
-<li><em>Not</em> trying to emulate product development</li>
-</ul>
-</li>
-<li>Assume learners can already:<ul>
-<li>Use the Unix command line</li>
-<li>Diff, commit, push, pull, and merge with Git</li>
-<li>Write Python programs that are hundreds of lines long</li>
-<li>Write JavaScript programs that are dozens of lines long</li>
-<li>Write unit tests in both languages</li>
-<li>Write an inner join in SQL</li>
-<li>Use breakpoints in a symbolic debugger</li>
-</ul>
-</li>
-<li>Four themes:<ol>
-<li>Tools:
-    linters, profilers, fuzz testers, static analyzers,
-    and others that they won't have seen in earlier courses</li>
-<li>Process:
-    effective meetings,
-    gathering and tracking requirements,
-    issue triage,
-    incident management,
-    and other activities that arise in programming in the large</li>
-<li>Evidence:
-    how to do empirical studies,
-    how to tell good ones from bad ones,
-    key results,
-    and open questions</li>
-<li>Responsibility:
-    how programmers can help and harm each other,
-    how software companies have harmed society,
-    and how to prevent, mitigate, or remediate those harms.</li>
-</ol>
-</li>
-</ul>
+<p class="subtitle">A one-semester introduction to software engineering for junior and senior undergraduates</p>
 <h2>Learner Persona</h2>
 <ul>
 <li>Shae, 20, is in the third year of an undergraduate degree in computer science.
@@ -93,11 +82,134 @@
 <li>Shae is impatient with abstract theory;
     they learn best when generalizing from practical examples.</li>
 </ul>
+<div class="callout">
+<p>This course teaches Shae how to work effectively in a small team
+on a large, long-running software project,
+how to find, evaluate, and apply findings from empirical studies in software engineering,
+and how to recognize and meet their professional and societal responsibilities.</p>
+</div>
+<h2>Overview</h2>
+<ul>
+<li>High-level design<ul>
+<li>Start with topics closest to what learners have already studied (programming)</li>
+<li>Don't ask them to (pretend to) emulate agile development when they have several other bosses
+    and we have no way to observe or give feedback on their day-to-day work</li>
+<li>Prepare them to be research consumers and collaborators rather than researchers themselves</li>
+<li>Move from "consideration for your teammates" to "consideration for your fellow citizens"
+    so as not to scare them away</li>
+</ul>
+</li>
+<li>Assume learners can already:<ul>
+<li>Use the Unix command line</li>
+<li>Diff, commit, push, pull, and merge with Git</li>
+<li>Write Python programs that are hundreds of lines long using classes</li>
+<li>Write JavaScript programs that are dozens of lines long</li>
+<li>Install and update packages in both languages</li>
+<li>Write unit tests in both languages</li>
+<li>Write simple database queries in SQL (e.g., equi-joins)</li>
+<li>Use breakpoints in a symbolic debugger</li>
+<li>Search the web and interact with an LLM</li>
+<li>Coordinate activity using email and chat</li>
+</ul>
+</li>
+<li>Four themes:<ol>
+<li>Tools:
+    linters, profilers, fuzz testers, static analyzers,
+    and others that they won't have seen in earlier courses.<ul>
+<li>These are small, natural steps beyond things they have already seen</li>
+<li>And even those who are most adverse to "soft" topics will accept these as valid</li>
+</ul>
+</li>
+<li>Process:
+    effective meetings,
+    gathering and tracking requirements,
+    issue triage,
+    incident management,
+    and other activities that arise in programming in the large<ul>
+<li>Because tools are only effective if you adapt your processes to them</li>
+<li>Many learners' experiences in team projects or work placements
+    will make them want to know how to make teamwork hurt less</li>
+<li>Naturally motivates the question, "How do we know what actually works?"</li>
+</ul>
+</li>
+<li>Evidence:
+    how to do empirical studies of various kinds,
+    how to tell good studies from bad ones,
+    and a few key findings<ul>
+<li>Show why we believe claims made about process</li>
+<li>And how to tell plausible punditry from reliable, reproducible results</li>
+<li>Motivate them to be industry partners in future research projects</li>
+<li>Or to go on to grad school to answer open questions of their own</li>
+</ul>
+</li>
+<li>Responsibility:
+    how programmers can help and harm each other,
+    how software companies have harmed society,
+    and how to prevent, mitigate, or remediate those harms<ul>
+<li>Previous theme has prepared them to read and understand empirical findings</li>
+<li>So they are now able to appreciate studies of discrimination,
+    online radicalization,
+    the environmental impact of computing,
+    and other sensitive topics</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Shape<ul>
+<li>Three classroom hours per week for 12 weeks…</li>
+<li>…but reserve 6 hours for overflow, guest speakers, and administration…</li>
+<li>…so 30 hour-long topics</li>
+<li>Define each one by the exercises at its end</li>
+<li>Mix of individual and collaborative assessments</li>
+</ul>
+</li>
+</ul>
 <h2>Lessons</h2>
 <div id="lessons">
 <ol>
 <li><a href="./intro/">Introduction</a></li>
+</ol>
+<h3>Tools</h3>
+<ol>
+<li><a href="./profile/">Profiling</a></li>
+<li><a href="./fuzzing/">Fuzzing</a></li>
+<li><a href="./packaging/">Packaging</a></li>
+<li><a href="./accessibility/">Accessibility</a></li>
+<li><a href="./linting/">Static Analysis</a></li>
+<li><a href="./queueing/">Queueing Theory</a></li>
+<li><a href="./monitoring/">Monitoring</a></li>
+</ol>
+<h3>Process</h3>
+<ol>
 <li><a href="./meetings/">Meetings</a></li>
+<li><a href="./requirements/">Requirements</a></li>
+<li><a href="./status/">Project Status</a></li>
+<li><a href="./governance/">Governance</a></li>
+<li><a href="./onboard/">Onboarding</a></li>
+<li><a href="./perfreview/">Performance Review</a></li>
+<li><a href="./offboard/">Offboarding</a></li>
+</ol>
+<h3>Evidence</h3>
+<ol>
+<li><a href="./mining/">Mining Software Repositories</a></li>
+<li><a href="./surveys/">Surveys</a></li>
+<li><a href="./qual/">Qualitative Studies</a></li>
+<li><a href="./lying/">How to Lie With Statistics</a></li>
+<li><a href="./conway/">Conway's Law</a></li>
+<li><a href="./productivity/">Productivity and Its Disconents</a></li>
+<li><a href="./discrimination/">Discrimination</a></li>
+</ol>
+<h3>Responsibility</h3>
+<ol>
+<li><a href="./business/">Business Models</a></li>
+<li><a href="./ip/">Intellectual Property</a></li>
+<li><a href="./fraud/">Fraud</a></li>
+<li><a href="./climate/">Environmental Impact</a></li>
+<li><a href="./speech/">Censorship and Free Speech</a></li>
+<li><a href="./labor/">Labor Rights</a></li>
+<li><a href="./licensure/">Licensure and Liability</a></li>
+</ol>
+<ol>
 <li><a href="./finale/">Conclusion</a></li>
 </ol>
 </div>
