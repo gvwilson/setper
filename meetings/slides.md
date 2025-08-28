@@ -5,7 +5,7 @@
 
 <section class="slide" id="cover" markdown="1">
 
-## Overview
+## Introduction
 
 -   Most people are really bad at meetings
     -   Because they've never been taught how
@@ -175,5 +175,13 @@
     -   "Well actually…"
 -   Don't make excuses for your questions or opinions
     -   "This is probably stupid, but…"
+
+</section>
+
+<section class="slide" markdown="1">
+
+## Conclusion
+
+FIXME
 
 </section>
