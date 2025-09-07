@@ -1,1 +1,3 @@
+[sdxpy-pack]: https://third-bit.com/sdxpy/pack/
 [wilson-greg]: https://third-bit.com/
+[z3-solver]: https://en.wikipedia.org/wiki/Z3_Theorem_Prover

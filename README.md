@@ -40,11 +40,11 @@ and how to recognize and meet their professional and societal responsibilities.
     -   Prepare them to be research consumers and collaborators rather than researchers themselves
     -   Move from "consideration for your teammates" to "consideration for your fellow citizens"
         so as not to scare them away
--   Assume learners can already:
+-   Assume learners can:
     -   Use the Unix command line
     -   Diff, commit, push, pull, and merge with Git
     -   Write Python programs that are hundreds of lines long using classes
-    -   Write JavaScript programs that are dozens of lines long
+    -   Read JavaScript programs that are dozens of lines long
     -   Install and update packages in both languages
     -   Write unit tests in both languages
     -   Write simple database queries in SQL (e.g., equi-joins)
@@ -54,7 +54,7 @@ and how to recognize and meet their professional and societal responsibilities.
 -   Four themes:
     1.  Tools:
         linters, profilers, fuzz testers, static analyzers,
-        and others that they won't have seen in earlier courses.
+        and others that they won't have seen in earlier courses
         -   These are small, natural steps beyond things they have already seen
         -   And even those who are most adverse to "soft" topics will accept these as valid
     2.  Process:
